@@ -1,0 +1,24 @@
+module leftshifter (
+    input a[8],
+    input b[8],
+    output out[8]
+  ) {
+  
+  sig x[8];
+  always {
+    //the last bit represent 1 bit shift
+    x=a;
+    if (b[0]){
+      x=x<<1;
+    }
+    //the second last bit represent 2 bit shift
+    if (b[1]){
+      x=x<<2;
+    }
+    //the third last bit represent 4 bit shift
+    if (b[2]){
+      x=x<<4;
+    }
+    out=x;
+  }
+}
