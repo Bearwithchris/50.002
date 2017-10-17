@@ -1,0 +1,23 @@
+module alu (
+    input clk,  // clock
+    input rst,  // reset
+    input alufn[6] // alufn control signal
+    input a[8] // input a
+    input b[8] //input b
+    output z //output for zero
+    output v //overflow
+    output n //negative
+    output alu[8] //output of input operated by alufn
+    output out
+  ) {
+  
+  //modules of alu
+    adder adder1;
+    compare compare1;
+    boolean boolean1;
+    shifter shifter1;
+  
+  always {
+    out = 0;
+  }
+}
